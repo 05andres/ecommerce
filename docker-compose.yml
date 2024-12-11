@@ -1,0 +1,34 @@
+version: '3.8'
+services:
+  ecommerce:
+    build: .
+    ports:
+      - "3001:3001"
+    volumes:
+      - ".:/app"
+    command: bash -c "rm -f /app/tmp/pids/server.pid && rails server -b 0.0.0.0 -p 3001"
+    depends_on:
+      - db
+      - redis
+    environment:
+      DATABASE_URL: postgres://postgres:password@db:5432/ecommerce_db
+      REDIS_URL: redis://redis:6379/0
+
+  db:
+    image: postgres:9.6
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: ecommerce_db
+      command: bash -c "psql -c \"SET client_min_messages TO 'warning';\" && docker-entrypoint.sh postgres"
+    ports:
+      - "5434:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+  redis:
+    image: redis:6-alpine
+    ports:
+      - "6379:6379"
+
+volumes:
+  db-data:

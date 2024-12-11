@@ -1,0 +1,20 @@
+<h1>Daily Purchase Report - <%= Date.yesterday %></h1>
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <thead>
+  <tr>
+    <th>Product</th>
+    <th>Total Quantity Sold</th>
+    <th>Total Revenue</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @report_data.each do |data| %>
+    <tr>
+      <td><%= data[:product_name] %></td>
+      <td><%= data[:total_quantity] %></td>
+      <td><%= number_to_currency(data[:total_revenue]) %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
