@@ -80,19 +80,3 @@ Notas adicionales
     JWT: El proyecto utiliza JWT para la autenticación. Asegúrate de configurar la clave secreta en el archivo .env como se indicó anteriormente.
     Otras dependencias: Si necesitas instalar dependencias adicionales, puedes hacerlo dentro del contenedor correspondiente, por ejemplo, utilizando docker-compose exec.
 
-Contribuciones
-
-Si deseas contribuir a este proyecto, por favor sigue los siguientes pasos:
-
-    Haz un fork del repositorio.
-    Crea una nueva rama para tu funcionalidad (git checkout -b feature/nueva-funcionalidad).
-    Realiza tus cambios y haz commit de ellos (git commit -am 'Añadir nueva funcionalidad').
-    Haz push a tu rama (git push origin feature/nueva-funcionalidad).
-    Abre un Pull Request describiendo los cambios realizados.
-
-Licencia
-
-Este proyecto está bajo la [licencia que uses] - consulta el archivo LICENSE para más detalles.
-
-
-La sección para configurar el archivo `.env` ahora está después de la construcción y levantamiento de contenedores.
