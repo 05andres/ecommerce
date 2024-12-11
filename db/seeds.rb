@@ -26,15 +26,15 @@ categories = []
   categories << Category.create!(name: "Category #{i + 1}", creator: admin1)
 end
 
-categories.each do |category|
-  Audit.create!(
-    action: 'create',
-    auditable: category,
-    admin: admin1,
-    description: "Category '\#{category.name}' created."
-  )
-end
-
+# categories.each do |category|
+#   Audit.create!(
+#     action: 'create',
+#     auditable: category,
+#     admin: admin1,
+#     description: "Category '\#{category.name}' created."
+#   )
+# end
+Thread.current[:current_admin] = admin2
 products = []
 categories.each do |category|
   3.times do |i|
@@ -43,12 +43,12 @@ categories.each do |category|
       Image.create(product: product, url: "https://example.com/product#{i + 1}-image#{j + 1}.jpg")
     end
 
-    Audit.create!(
-      action: 'create',
-      auditable: product,
-      admin: admin1,
-      description: "Product #{product.name} created under category  #{category.name}'."
-    )
+    # Audit.create!(
+    #   action: 'create',
+    #   auditable: product,
+    #   admin: admin1,
+    #   description: "Product #{product.name} created under category  #{category.name}'."
+    # )
 
     products << product
   end
@@ -66,13 +66,13 @@ products.each do |product|
   end
 end
 
-Purchase.find_each do |purchase|
-  Audit.create!(
-    action: 'create',
-    auditable: purchase,
-    admin: admin2,
-    description: "Purchase of #{purchase.quantity} units of #{purchase.product.name}' created."
-  )
-end
+# Purchase.find_each do |purchase|
+#   Audit.create!(
+#     action: 'create',
+#     auditable: purchase,
+#     admin: admin2,
+#     description: "Purchase of #{purchase.quantity} units of #{purchase.product.name}' created."
+#   )
+# end
 
 puts "Seeding completed successfully!"

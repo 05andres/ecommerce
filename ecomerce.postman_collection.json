@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "70fdb5f4-5477-45a7-af4e-2cef22e3860d",
+		"name": "ecomerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28544073",
+		"_collection_link": "https://puntopay-dev.postman.co/workspace/Puntopay-Workspace~96f5ff61-1dcc-4eaa-82fd-c693bed26bfb/collection/28544073-70fdb5f4-5477-45a7-af4e-2cef22e3860d?action=share&source=collection_link&creator=28544073"
+	},
+	"item": [
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "top purchases",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ADMIN_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LOCAL}}/products/top_purchases",
+							"host": [
+								"{{LOCAL}}"
+							],
+							"path": [
+								"products",
+								"top_purchases"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "top_earnings_by_category",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "purchases",
+			"item": [
+				{
+					"name": "index_by_parameter",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ADMIN_TOKEN_E}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LOCAL}}/purchases/index-by-parameter?start_date=2024-12-10 &end_date=2024-12-10 &product_id=4&client_id=2&admin_id=2",
+							"host": [
+								"{{LOCAL}}"
+							],
+							"path": [
+								"purchases",
+								"index-by-parameter"
+							],
+							"query": [
+								{
+									"key": "start_date",
+									"value": "2024-12-10 "
+								},
+								{
+									"key": "end_date",
+									"value": "2024-12-10 "
+								},
+								{
+									"key": "product_id",
+									"value": "4"
+								},
+								{
+									"key": "client_id",
+									"value": "2"
+								},
+								{
+									"key": "admin_id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "index_by_granularity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ADMIN_TOKEN_E}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LOCAL}}/purchases/index-by-granularity?start_date=2024-12-10 &end_date=2024-12-10 &product_id=4&client_id=2&admin_id=2&granularity=hour",
+							"host": [
+								"{{LOCAL}}"
+							],
+							"path": [
+								"purchases",
+								"index-by-granularity"
+							],
+							"query": [
+								{
+									"key": "start_date",
+									"value": "2024-12-10 "
+								},
+								{
+									"key": "end_date",
+									"value": "2024-12-10 "
+								},
+								{
+									"key": "product_id",
+									"value": "4"
+								},
+								{
+									"key": "client_id",
+									"value": "2"
+								},
+								{
+									"key": "admin_id",
+									"value": "2"
+								},
+								{
+									"key": "granularity",
+									"value": "hour"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "LOCAL",
+			"value": "http://localhost:3001",
+			"type": "string"
+		},
+		{
+			"key": "ADMIN_TOKEN_E",
+			"value": "eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwidHlwZSI6IkFkbWluIiwiaXNzdWVkIjoxNjI5MzAzNTk2fQ.CXVUTLhFhwhyvKkEClILr023_8TyX7fG7oM2U_mX1Do",
+			"type": "string"
+		}
+	]
+}
