@@ -1,5 +1,5 @@
-class Api::BaseController < ActionController::API
-
+class Api::BaseController <  ActionController::Base
+  include Swagger::Docs::ImpotentMethods
   before_filter  :authenticate_admin
 
   private

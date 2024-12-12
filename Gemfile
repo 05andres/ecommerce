@@ -23,7 +23,8 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'whenever', require: false
 gem 'connection_pool', '~> 2.0'
 
-gem 'swagger-docs', '~> 0.2.7'
+gem 'swagger-docs'
+
 gem 'rails-api', '0.4.1'
 
 

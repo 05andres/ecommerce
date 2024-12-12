@@ -5,20 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d65f06c-318e-43d7-addd-8b64fd787798" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/auth_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/v1/auth_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/products_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/v1/products_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/purchases_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/v1/purchases_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/mailers/purchase_mailer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/mailers/purchase_mailer.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/concerns/auditable.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/concerns/auditable.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/purchase_mailer/first_purchase_email.text.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/purchase_mailer/first_purchase_email.text.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/wrap_parameters.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/wrap_parameters.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecomerce.postman_collection.json" beforeDir="false" afterPath="$PROJECT_DIR$/ecomerce.postman_collection.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/tasks/sidekiq.rake" beforeDir="false" afterPath="$PROJECT_DIR$/lib/tasks/sidekiq.rake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.rdoc" beforeDir="false" afterPath="$PROJECT_DIR$/README.rdoc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/api/base_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/base_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/api/v1/products_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/v1/products_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/swagger/api/products_swagger.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/swagger_docs.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/swagger_docs.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce_db - public.png" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce_db - public.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +35,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/public/api-docs.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/public/api/v1/api-docs.json" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -49,28 +45,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/carloslopez/Escritorio/study/ecommerce&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ruby.structure.view.model.defaults.configured&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/carloslopez/Escritorio/study/ecommerce/public/api",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ruby.structure.view.model.defaults.configured": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/api" />
+      <recent name="$PROJECT_DIR$/public/api/swagger" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/api/v1" />
       <recent name="$PROJECT_DIR$/app/controllers/api" />
       <recent name="$PROJECT_DIR$/app/controllers/api/v1" />
       <recent name="$PROJECT_DIR$/app/controllers" />
       <recent name="$PROJECT_DIR$/config/initializers" />
-      <recent name="$PROJECT_DIR$/app/models" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -173,7 +174,8 @@
       <updated>1733775104716</updated>
       <workItem from="1733775105807" duration="43950000" />
       <workItem from="1733971267482" duration="8457000" />
-      <workItem from="1733982016404" duration="4257000" />
+      <workItem from="1733982016404" duration="7789000" />
+      <workItem from="1734020395020" duration="10557000" />
     </task>
     <servers />
   </component>

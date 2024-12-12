@@ -74,6 +74,19 @@ Si necesitas trabajar en un entorno de desarrollo o realizar migraciones de base
 
 docker-compose exec <nombre_del_servicio> bash
 
+# Documentación de la API
+
+La documentación de la API está disponible a través de Swagger en la siguiente ruta:
+
+- **Swagger UI**: [http://localhost:3001/api/index.html](http://localhost:3001/api/index.html)
+
+## Cómo usar
+
+1. Asegúrate de tener el servidor en ejecución.
+2. Accede a la ruta de Swagger UI mencionada arriba en tu navegador.
+3. Visualiza y prueba los endpoints de la API directamente desde la interfaz gráfica.
+
+
 Notas adicionales
 
     Base de datos: El proyecto usa PostgreSQL 9. Asegúrate de que la base de datos esté configurada correctamente antes de comenzar a trabajar con la aplicación.
