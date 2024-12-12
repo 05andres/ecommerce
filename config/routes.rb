@@ -37,20 +37,23 @@ App::Application.routes.draw do
   #       get 'recent', :on => :collection
   #     end
   #   end
+  namespace :api do
+    namespace :v1 do
+      get 'swagger', to: 'docs#index' # Ruta que apunta al DocsController
+      scope 'admin' do
+        post 'login', to:  'auth#login'
+      end
 
-  #Sample resource route within a namespace:
-  scope 'admin' do
-    post 'login', to:  'auth#login'
-  end
+      scope 'products' do
+        get 'top_purchases' => 'products#top_purchases_by_category'
+        get 'top_earnings' => 'products#top_earnings_by_category'
+      end
 
-  scope 'products' do
-    get 'top_purchases' => 'products#top_purchases_by_category'
-    get 'top_earnings' => 'products#top_earnings_by_category'
-  end
-
-  scope 'purchases' do
-    get 'index-by-parameter' => 'purchases#index_by_parameter'
-    get 'index-by-granularity' => 'purchases#index_by_granularity'
+      scope 'purchases' do
+        get 'index-by-parameter' => 'purchases#index_by_parameter'
+        get 'index-by-granularity' => 'purchases#index_by_granularity'
+      end
+    end
   end
 
 

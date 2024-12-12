@@ -158,12 +158,39 @@
 			]
 		},
 		{
-			"name": "login",
-			"request": {
-				"method": "GET",
-				"header": []
-			},
-			"response": []
+			"name": "aith",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"admin@example.com\",\n    \"password\": \"password\",\n    \"confirm_password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCAL}}/admin/login",
+							"host": [
+								"{{LOCAL}}"
+							],
+							"path": [
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	],
 	"event": [
@@ -191,12 +218,12 @@
 	"variable": [
 		{
 			"key": "LOCAL",
-			"value": "http://localhost:3001",
+			"value": "http://localhost:3001/api/v1",
 			"type": "string"
 		},
 		{
 			"key": "ADMIN_TOKEN_E",
-			"value": "eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwidHlwZSI6IkFkbWluIiwiaXNzdWVkIjoxNjI5MzAzNTk2fQ.CXVUTLhFhwhyvKkEClILr023_8TyX7fG7oM2U_mX1Do",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhZG1pbl9pZCI6MTV9.0TQqQkUKasXBnms1o91ZHIbPbAgdhOIM0Sz1sOZyYb0",
 			"type": "string"
 		}
 	]

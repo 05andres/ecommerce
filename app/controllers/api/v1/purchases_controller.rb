@@ -1,4 +1,4 @@
-class PurchasesController < ApplicationController
+class Api::V1::PurchasesController < Api::BaseController
 
   def index_by_parameter
     render json: PurchaseService.index_by_parameter(params)

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class AuthController < ApplicationController
+class Api::V1::AuthController < Api::BaseController
   skip_before_filter :authenticate_admin, only: [:login]
 
   def login
